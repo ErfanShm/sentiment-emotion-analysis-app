@@ -1,0 +1,7 @@
+gradio
+streamlit
+transformers
+torch
+huggingface-hub
+tokenizers
+plotly
