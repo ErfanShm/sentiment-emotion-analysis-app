@@ -56,13 +56,13 @@ menu() {
         case $choice in
             1)
                 echo "Running sentiment analysis with Streamlit interface..."
-                streamlit run interfaces/streamlit_interface.py
+                streamlit run interfaces/streamlit/app.py
                 echo "Press Enter to return to the menu."
                 read
                 ;;
             2)
                 echo "Running sentiment analysis with Gradio interface..."
-                python run_sentiment_analysis.py gradio
+                python interfaces/gradio/app.py
                 echo "Press Enter to return to the menu."
                 read
                 ;;
