@@ -3,10 +3,10 @@ import os
 import sys
 
 def launch_streamlit():
-    subprocess.run(["streamlit", "run", "interfaces/streamlit_interface.py"])
+    subprocess.run(["streamlit", "run", "interfaces/streamlit/app.py"])
 
 def launch_gradio():
-    import interfaces.gradio_interface as gradio_interface
+    import interfaces.gradio.app as gradio_interface
     gradio_interface.main()
 
 if __name__ == "__main__":
