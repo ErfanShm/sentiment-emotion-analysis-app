@@ -1,15 +1,17 @@
-# Practical Sentiment Analysis with DistilBERT
+# Practical Sentiment and Emotion Analysis with DistilBERT and RoBERTa
 
-Welcome to the Sentiment Analysis Application repository! This guide provides a detailed overview of how to run a sentiment analysis tool using both Streamlit and Gradio interfaces. This project demonstrates how to integrate advanced AI models with user-friendly interfaces for practical natural language processing tasks.
+Welcome to the Sentiment and Emotion Analysis Application repository! This guide provides a detailed overview of how to run a sentiment and emotion analysis tool using both Streamlit and Gradio interfaces. This project demonstrates how to integrate advanced AI models with user-friendly interfaces for practical natural language processing tasks.
 
-- **Script Folder:** This repository contains the scripts required to run the sentiment analysis application with both Streamlit and Gradio.
+- **Script Folder:** This repository contains the scripts required to run the sentiment and emotion analysis application with both Streamlit and Gradio.
 
 ## Overview
 
-This sentiment analysis application utilizes the `distilbert` model fine-tuned on the SST-2 dataset to classify text as positive or negative. The application provides two interfaces:
+This application utilizes the `distilbert-base-multilingual-cased-sentiments-student` model for sentiment analysis and the `roberta-base-go_emotions ` model for emotion detection. The sentiment analysis covers three categories: positive, negative, and neutral, while the emotion detection identifies the top six emotions with corresponding scores.
 
-- **Streamlit Interface**: For a web-based interactive experience.
-- **Gradio Interface**: For a quick and easy web-based demo.
+The application provides two interfaces:
+
+- **Streamlit Interface**: For a web-based interactive experience with additional features.
+- **Gradio Interface**: For a quick and easy web-based demo with suggestion capabilities.
 
 This guide covers:
 
@@ -68,7 +70,13 @@ To run the application with Streamlit, select the Streamlit interface option fro
 python run_sentiment_analysis.py --interface streamlit
 ```
 
-This will start a local Streamlit server and open your default web browser to view the application.
+This will start a local Streamlit server and open your default web browser to view the application. The Streamlit interface includes:
+- **Theme Selection**: Choose between Normal, Unnormal, or Fun themes.
+- **Sentiment and Emotion History**: View past sentiment and emotion analyses.
+- **Interactive Tutorial**: Get a guided tour of the application.
+- **Animated Transitions**: Experience dynamic visual effects for sentiment scores.
+- **Twitter Sharing**: Share your analysis results directly on Twitter.
+- **Visualization**: Displays sentiment and emotion scores using colorful bar charts.
 
 ### Launch Gradio Interface
 
@@ -78,7 +86,10 @@ To run the application with Gradio, select the Gradio interface option from the 
 python run_sentiment_analysis.py --interface gradio
 ```
 
-This will start a local Gradio server and open your default web browser to view the application.
+This will start a local Gradio server and open your default web browser to view the application. The Gradio interface features:
+- **Twitter Sharing**: Share your analysis results directly on Twitter.
+- **Visualization**: Displays sentiment and emotion scores using bar charts.
+- **Suggestion Options**: Offers pre-prepared text options that users can pick from to facilitate analysis.
 
 ## Troubleshooting
 
@@ -90,16 +101,17 @@ If you encounter issues, verify that you are in the correct directory and that a
 
 ## Contributing
 
-Contributions to enhance this application are welcome! If you have suggestions, improvements, or additional features, please feel free to open an issue or create a pull request. Let's collaborate to make this tool even more useful for sentiment analysis.
+Contributions to enhance this application are welcome! If you have suggestions, improvements, or additional features, please feel free to open an issue or create a pull request. Let's collaborate to make this tool even more useful for sentiment and emotion analysis.
 
 ## Additional Resources
 
-Explore additional resources to deepen your understanding of sentiment analysis and the tools used:
+Explore additional resources to deepen your understanding of sentiment and emotion analysis and the tools used:
 
 - [Hugging Face Transformers Documentation](https://huggingface.co/transformers/)
 - [Streamlit Documentation](https://docs.streamlit.io/)
 - [Gradio Documentation](https://gradio.app/docs/)
-- [DistilBERT Model Overview](https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english)
+- [DistilBERT Model Overview](https://huggingface.co/lxyuan/distilbert-base-multilingual-cased-sentiments-student)
+- [RoBERTa Model Overview](https://huggingface.co/SamLowe/roberta-base-go_emotions)
 
 ## License
 
